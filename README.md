@@ -1,6 +1,12 @@
 # SDGFT — Six-Dimensional Geometric Field Theory
 
+[![CI](https://github.com/cosmologicmind/sdgft/actions/workflows/ci.yml/badge.svg)](https://github.com/cosmologicmind/sdgft/actions/workflows/ci.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 > **Zero free parameters.** Every prediction derived from two topological constants of the 24-cell: Δ = 5/24 and δ = 1/24.
+
+**Website:** [sdgft.org](https://sdgft.org/)
 
 SDGFT is a geometric field theory in which space-time is an effective, fractal projection of a six-dimensional 24-cell polytope.  All coupling constants, mass ratios, and cosmological parameters emerge from the lattice constants Δ (Fibonacci conflict) and δ (lattice tension), plus the golden ratio φ and the critical dimension D\* = 67/24.
 
@@ -137,5 +143,6 @@ If you use this code in academic work, please cite:
   title   = {SDGFT: Six-Dimensional Geometric Field Theory},
   year    = {2025},
   url     = {https://github.com/cosmologicmind/sdgft},
+  note    = {\url{https://sdgft.org}},
 }
 ```
