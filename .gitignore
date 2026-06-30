@@ -39,3 +39,9 @@ Thumbs.db
 
 # ── GitHub prompts (local AI config) ─────────────────
 .github/prompts/
+
+# ── User Specific Exclusions ─────────────────────────
+uv.lock
+papers/*
+!papers/*.pdf
+data/
