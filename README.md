@@ -101,6 +101,8 @@ python -m sdgft.experimental.ckm_phase
 
 ## Tests
 
+> **Note:** The experimental SPARC tests require downloading the external galaxy rotation database. If the data is missing, these tests will be skipped automatically.
+
 ```bash
 # Full suite
 pytest
@@ -122,7 +124,8 @@ pytest --cov=sdgft --cov-report=term-missing
 
 ### v2.0.1
 - Added `astropy` to development dependencies to fix missing module error during `test_bh_fitting.py`.
-- Verified and ran all 1333 tests successfully (debugging complete).
+- Fixed missing SPARC dataset which caused 215 tests to be skipped (`tests/test_exp_sparc_batch.py` and `tests/test_exp_sparc_tully_fisher.py`).
+- Verified and ran all 1333 tests successfully.
 
 ## Theory
 
