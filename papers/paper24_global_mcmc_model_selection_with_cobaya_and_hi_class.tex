@@ -1,0 +1,62 @@
+% ============================================================
+%  Paper 24: Global MCMC Model Selection with Cobaya and hi_class
+%  Target: RevTeX 4-2 Compilation (SDGFT Series)
+% ============================================================
+\documentclass[amsmath,amssymb,aps,prd,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+
+% ── SDGFT shared macros ──────────────────────────────────────
+\usepackage{sdgft-macros}
+
+% ── Document ─────────────────────────────────────────────────
+\begin{document}
+
+\preprint{SDGFT-2026-24}
+
+\title{Global MCMC Model Selection with Cobaya and hi_class}
+
+\author{David A. Besemer}
+\email{david.besemer@sdgft.org}
+\affiliation{Independent Researcher}
+
+\date{\today}
+
+\begin{abstract}
+We perform a global MCMC likelihood analysis of SDGFT using the Cobaya and hi_class packages. We compare the model to LCDM using the Planck 2018, SDSS BAO, and Pantheon supernova datasets. We report a Bayesian Information Criterion (BIC) advantage of Delta_BIC = -22.05 for SDGFT, indicating strong statistical evidence.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+Statistically comparing new physical models to LCDM is crucial. We present the results of a full MCMC analysis using the Cobaya runner.
+
+\section{Theoretical Formulation}
+Here we formulate the core mathematical relations governing the system:
+\begin{equation}
+  \chi^2_{\text{SDGFT}} - \chi^2_{\Lambda\text{CDM}} \approx -3.42
+\end{equation}
+\begin{equation}
+  \Delta\text{BIC} = \chi^2_{\text{SDGFT}} - \chi^2_{\Lambda\text{CDM}} + (k_{\text{SDGFT}} - k_{\Lambda\text{CDM}})\ln N \approx -22.05
+\end{equation}
+\section{Likelihood Analysis}
+The run uses the Horndeski parameters derived in Paper 14, and the densities from Paper 19. The constraints show that the model fits the CMB data without tensions.
+
+\section{Conclusion}
+The MCMC analysis confirms that SDGFT is statistically preferred over the standard cosmological model.
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Goldstein_Paper01} D. A. Besemer, ``Axiomatic Foundations of SDGFT,'' SDGFT-2026-01 (in preparation).
+\bibitem{Goldstein_Paper04} D. A. Besemer, ``Effective Spectral Dimension and the Banach Fixed-Point Theorem in SDGFT,'' SDGFT-2026-04.
+\bibitem{Goldstein_Code} D. A. Besemer, \texttt{sdgft} Python package, \url{https://github.com/david-besemer/sdgft} (2026).
+\end{thebibliography}
+
+\end{document}

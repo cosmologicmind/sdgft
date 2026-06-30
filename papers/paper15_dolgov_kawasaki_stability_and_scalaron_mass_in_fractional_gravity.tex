@@ -1,0 +1,59 @@
+% ============================================================
+%  Paper 15: Dolgov-Kawasaki Stability and Scalaron Mass in Fractional Gravity
+%  Target: JCAP Compilation (SDGFT Series)
+% ============================================================
+\documentclass[a4paper,11pt]{article}
+\usepackage{jcappub}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+
+% ── SDGFT shared macros ──────────────────────────────────────
+\usepackage{sdgft-macros}
+
+% ── Document ─────────────────────────────────────────────────
+\begin{document}
+
+\title{Dolgov-Kawasaki Stability and Scalaron Mass in Fractional Gravity}
+
+\author{David A. Besemer}
+\affiliation{Independent Researcher}
+\emailAdd{david.besemer@sdgft.org}
+
+\abstract{
+We prove the stability of the f(R) = R^(67/48) action under the Dolgov-Kawasaki criterion. Since the second derivative f''(R) is strictly positive for n = 67/48, the theory is free of tachyonic instabilities. We calculate the mass of the scalaron field, showing that it remains heavy in the early universe, driving stable modified gravity dynamics.
+}
+
+\arxivnumber{SDGFT-2026-15}
+
+\maketitle
+
+\section{Introduction}
+Modified gravity theories can suffer from ghost or tachyonic instabilities. We analyze the stability of the SDGFT action.
+
+\section{Theoretical Formulation}
+Here we formulate the core mathematical relations governing the system:
+\begin{equation}
+  f''(R) = n(n-1)R^{n-2} > 0 \quad (\text{for } n = \frac{67}{48} > 1)
+\end{equation}
+\begin{equation}
+  m_f^2 = \frac{1}{3}\left(\frac{f'}{f''} - R\right) > 0
+\end{equation}
+\section{Stability Proof}
+The positivity of f''(R) guarantees that the scalaron remains a physical particle with a positive mass squared, precluding ghost modes.
+
+\section{Conclusion}
+The R^(67/48) action is a stable extension of General Relativity, suitable for both early-universe inflation and late-time cosmology.
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Goldstein_Paper01} D. A. Besemer, ``Axiomatic Foundations of SDGFT,'' SDGFT-2026-01 (in preparation).
+\bibitem{Goldstein_Paper04} D. A. Besemer, ``Effective Spectral Dimension and the Banach Fixed-Point Theorem in SDGFT,'' SDGFT-2026-04.
+\bibitem{Goldstein_Code} D. A. Besemer, \texttt{sdgft} Python package, \url{https://github.com/david-besemer/sdgft} (2026).
+\end{thebibliography}
+
+\end{document}

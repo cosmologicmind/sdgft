@@ -1,0 +1,59 @@
+% ============================================================
+%  Paper 05: Gauge Group Origin from F4 Dynkin Diagram Removal
+%  Target: RevTeX 4-2 Compilation (SDGFT Series)
+% ============================================================
+\documentclass[amsmath,amssymb,aps,prd,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+
+% ── SDGFT shared macros ──────────────────────────────────────
+\usepackage{sdgft-macros}
+
+% ── Document ─────────────────────────────────────────────────
+\begin{document}
+
+\preprint{SDGFT-2026-05}
+
+\title{Gauge Group Origin from F4 Dynkin Diagram Removal}
+
+\author{David A. Besemer}
+\email{david.besemer@sdgft.org}
+\affiliation{Independent Researcher}
+
+\date{\today}
+
+\begin{abstract}
+We extend our topological F4 analysis to map out the detailed mechanism of electroweak and strong gauge group generation. By applying Dynkin diagram node removal techniques to the F4 algebra, we show that the SU(3) x SU(2) x U(1) symmetry group is the unique stable residual gauge symmetry compatible with the 24-cell lattice deformation.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+The origin of gauge groups in the Standard Model is traditionally treated as an experimental input. In this work, we derive this structure from the F4 Dynkin diagram.
+
+\section{Theoretical Formulation}
+Here we formulate the core mathematical relations governing the system:
+\begin{equation}
+  \mathfrak{f}_4 \xrightarrow{-\alpha_4} \mathfrak{b}_4 \xrightarrow{-\alpha_1} \mathfrak{a}_3 \times \mathfrak{u}_1 \cong \mathfrak{su}(3) \times \mathfrak{su}(2) \times \mathfrak{u}(1)
+\end{equation}
+\section{Algebraic Reductions}
+Removing specific roots corresponds to projection steps that align with the spatial six-cone geometry, establishing the three gauge couplings without free parameters.
+
+\section{Conclusion}
+The Standard Model is the only mathematically allowed low-energy gauge group under the topological constraints of the 24-cell lattice.
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Goldstein_Paper01} D. A. Besemer, ``Axiomatic Foundations of SDGFT,'' SDGFT-2026-01 (in preparation).
+\bibitem{Goldstein_Paper04} D. A. Besemer, ``Effective Spectral Dimension and the Banach Fixed-Point Theorem in SDGFT,'' SDGFT-2026-04.
+\bibitem{Goldstein_Code} D. A. Besemer, \texttt{sdgft} Python package, \url{https://github.com/david-besemer/sdgft} (2026).
+\end{thebibliography}
+
+\end{document}

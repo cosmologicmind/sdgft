@@ -1,0 +1,389 @@
+%%% SDGFT-2026-01
+%%% Axiomatic Foundations of Scale-Dependent Geometric Field Theory
+%%%
+\documentclass[amsmath,amssymb,aps,prd,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{sdgft-macros}
+
+\begin{document}
+
+\preprint{SDGFT-2026-01}
+
+\title{Axiomatic Foundations of Scale-Dependent Geometric Field Theory}
+
+\author{David~A.~Besemer}
+\email{david.besemer@sdgft.org}
+\affiliation{Independent Researcher}
+\date{\today}
+
+\begin{abstract}
+We present the axiomatic foundations of Scale-Dependent Geometric Field Theory
+(SDGFT), a zero-parameter framework that derives the constants of Nature from
+the geometry of the 24-cell polytope $\{3,4,3\}$.  Two axioms suffice: (I)~the
+Fibonacci-lattice conflict parameter $\Delta = F_5/24 = 5/24$ and (II)~the
+elementary lattice tension $\delta = 1/24$.  From these, the golden ratio
+$\varphi = (1+\sqrt{5})/2$, the six-cone partition of $S^3$, and the critical
+spacetime dimension $D^* = 67/24$ emerge without free parameters.  We establish
+consistency checks, connect the construction to the Dedekind eta function and
+the bosonic string dimension $D_{\text{bos}} = 26$, and contrast SDGFT's
+zero-parameter philosophy with the landscape problem of string theory and the
+Barbero--Immirzi ambiguity of loop quantum gravity.
+\end{abstract}
+
+\maketitle
+
+%======================================================================
+\section{Introduction}\label{sec:intro}
+%======================================================================
+
+The quest for a unified description of quantum gravity and the Standard Model
+(SM) of particle physics has produced two major research programmes---string
+theory and loop quantum gravity (LQG)---each carrying adjustable parameters
+or unconstrained moduli.  String theory admits of order $10^{500}$ flux vacua
+in its landscape~\cite{Bousso2000,Susskind2003}, while LQG contains the
+Barbero--Immirzi parameter $\gamma_{\text{BI}}$ whose value is fixed only by
+matching the Bekenstein--Hawking entropy~\cite{Immirzi1997,Rovelli1996}.
+
+Scale-Dependent Geometric Field Theory (SDGFT) takes a radically different
+approach: \emph{every} physical constant is derived from the combinatorial and
+topological properties of a single geometric object, the 24-cell polytope
+$\{3,4,3\}$.  The theory contains \emph{zero} adjustable parameters.  In this
+paper---the first of the SDGFT Band~I series---we lay the axiomatic
+foundations.
+
+The programme proceeds as follows.  Section~\ref{sec:24cell} reviews the
+properties of the 24-cell.  Sections~\ref{sec:axiom1} and~\ref{sec:axiom2}
+state the two axioms.  Section~\ref{sec:emergent} derives the emergent
+constants.  Section~\ref{sec:checks} presents consistency checks.
+Section~\ref{sec:dedekind} connects the axioms to modular forms and the bosonic
+string.  Section~\ref{sec:zero} contrasts SDGFT with existing approaches, and
+Sec.~\ref{sec:conclusions} concludes.
+
+%======================================================================
+\section{The 24-Cell Polytope \texorpdfstring{$\{3,4,3\}$}{}}\label{sec:24cell}
+%======================================================================
+
+The 24-cell is the unique self-dual regular polytope in four dimensions that has
+no three-dimensional analogue.  Its Schl\"afli symbol $\{3,4,3\}$ encodes the
+local geometry: each cell is an octahedron $\{3,4\}$, four of which meet at
+every edge.  The combinatorial data are summarised in Table~\ref{tab:24cell}.
+
+\begin{table}[H]
+\centering
+\caption{Combinatorial data of the 24-cell.}\label{tab:24cell}
+\begin{tabular}{@{}lc@{}}
+\toprule
+Element & Count \\
+\midrule
+Vertices ($f_0$) & 24 \\
+Edges ($f_1$) & 96 \\
+Triangular 2-faces ($f_2$) & 96 \\
+Octahedral 3-cells ($f_3$) & 24 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The Euler characteristic satisfies
+\begin{equation}\label{eq:euler}
+  \chi = f_0 - f_1 + f_2 - f_3 = 24 - 96 + 96 - 24 = 0\,,
+\end{equation}
+consistent with a closed 4-manifold tiling.  The 24 vertices may be placed on
+the unit 3-sphere $S^3 \subset \mathbb{R}^4$ at the positions
+\begin{equation}\label{eq:verts}
+  \bigl\{\,(\pm1,0,0,0),\;
+  \tfrac{1}{\sqrt{2}}(\pm1,\pm1,0,0)\,\bigr\}
+\end{equation}
+and all permutations thereof, giving 8 vertices of the form $(\pm1,0,0,0)$ and
+16 of the form $\tfrac{1}{\sqrt{2}}(\pm1,\pm1,0,0)$.  The symmetry group is
+the Weyl group of $F_4$, of order $|W(F_4)| = 1152$; see
+Ref.~\cite{Besemer2026_02} for a detailed treatment.
+
+A key structural property is the decomposition of the 24-cell into three
+mutually orthogonal 16-cells (cross-polytopes), each contributing 8~vertices:
+\begin{equation}\label{eq:decomp}
+  24\text{-cell} = 16\text{-cell}_1 \cup 16\text{-cell}_2
+                  \cup 16\text{-cell}_3\,,
+  \quad 8+8+8=24\,.
+\end{equation}
+This triple decomposition is intimately connected with $D_4$ triality and
+underlies the emergence of three fermion generations in SDGFT.
+
+%======================================================================
+\section{Axiom I: Fibonacci-Lattice Conflict}\label{sec:axiom1}
+%======================================================================
+
+\noindent\textbf{Axiom~I.}\quad\emph{The Fibonacci-lattice conflict parameter is}
+\begin{equation}\label{eq:Delta}
+  \boxed{\;\Delta \;=\; \frac{F_5}{24} \;=\; \frac{5}{24}\;\approx\; 0.20833\,.\;}
+\end{equation}
+
+Here $F_5 = 5$ is the fifth Fibonacci number.  The numerator encodes the
+fivefold symmetry of the icosahedron---the symmetry incompatible with a
+crystallographic lattice in three dimensions---while the denominator~$24$
+counts the vertices (equivalently, cells) of the 24-cell.  The parameter
+$\Delta$ therefore quantifies the geometric frustration arising from embedding
+Fibonacci (icosahedral) order into a lattice defined by $\{3,4,3\}$.
+
+Physically, $\Delta$ sets the fundamental mismatch between the continuous
+rotational symmetry of the golden ratio and the discrete symmetry of the
+crystallographic lattice.  In the language of condensed-matter physics, it is
+analogous to a phason strain in a quasicrystal.
+
+%======================================================================
+\section{Axiom II: Elementary Lattice Tension}\label{sec:axiom2}
+%======================================================================
+
+\noindent\textbf{Axiom~II.}\quad\emph{The elementary lattice tension is}
+\begin{equation}\label{eq:delta}
+  \boxed{\;\delta \;=\; \frac{1}{24}\;\approx\; 0.04167\,.\;}
+\end{equation}
+
+This is the smallest non-zero eigenvalue of the lattice-strain operator on the
+24-cell.  Because the 24-cell has exactly 24~cells, the unit of geometric
+tension is $1/24$.  The parameter $\delta$ plays the role of a ``quantum'' of
+curvature defect on $S^3$: the minimal angular deficit that a single vertex
+insertion can produce.
+
+Together, Axioms~I and~II fix every constant of the theory.  No further input
+is required.
+
+%======================================================================
+\section{Emergent Constants}\label{sec:emergent}
+%======================================================================
+
+\subsection{The golden ratio}
+
+The ratio of the two axioms yields
+\begin{equation}\label{eq:ratio}
+  \frac{\Delta}{\delta} = \frac{5/24}{1/24} = 5\,.
+\end{equation}
+The integer~5 uniquely singles out the golden ratio $\varphi = (1+\sqrt{5})/2$
+among all algebraic numbers: it is the positive root of $x^2 - x - 1 = 0$
+whose discriminant is~$\sqrt{5}$.  More precisely,
+\begin{equation}\label{eq:phi}
+  \varphi = \frac{1 + \sqrt{\Delta/\delta}}{2}
+           = \frac{1 + \sqrt{5}}{2} \approx 1.61803\,.
+\end{equation}
+
+\subsection{Cone half-angle}
+
+The sum of the two axioms yields
+\begin{equation}\label{eq:sum}
+  \Delta + \delta = \frac{5}{24} + \frac{1}{24} = \frac{6}{24}
+                  = \frac{1}{4} = \sin^2 30°\,.
+\end{equation}
+The identification $\sin^2\theta_{\max} = 1/4$ fixes the maximal cone
+half-angle $\theta_{\max} = 30°$.
+
+\subsection{Six-cone partition}
+
+A cone of half-angle $30°$ on $S^3$ subtends a solid angle
+\begin{equation}\label{eq:solidangle}
+  \Omega(\theta_{\max}) = 2\pi\bigl(1 - \cos\theta_{\max}\bigr)
+  = 2\pi\!\left(1 - \frac{\sqrt{3}}{2}\right).
+\end{equation}
+The total solid angle of $S^3$ is $2\pi^2$.  The partition number is
+\begin{equation}\label{eq:partition}
+  N_{\text{cones}} = \frac{2\pi^2}{\Omega(\theta_{\max})}
+  = \frac{2\pi^2}{2\pi(1 - \sqrt{3}/2)} = \frac{\pi}{1 - \sqrt{3}/2}\,.
+\end{equation}
+For the flat-space (small-angle) limit, $360°/60° = 6$, giving exactly six
+congruent cones.  This six-cone partition is the geometric origin of the three
+fermion generations $\times$ two chiralities; see Ref.~\cite{Besemer2026_03}
+for the detailed proof.
+
+\subsection{Critical dimension}
+
+The critical spacetime dimension of SDGFT is
+\begin{equation}\label{eq:Dstar}
+  D^* = \frac{67}{24} \approx 2.79167 \quad(\text{tree level})\,,
+\end{equation}
+with the fixed-point value $D^* \approx 2.79676$ obtained by resumming
+logarithmic corrections.  The spectral dimension at the Planck scale is
+\begin{equation}\label{eq:spectral}
+  n = \frac{D^*}{2} = \frac{67}{48} \approx 1.39583\,.
+\end{equation}
+
+%======================================================================
+\section{Consistency Checks}\label{sec:checks}
+%======================================================================
+
+The two axioms satisfy a pair of exact arithmetic identities:
+\begin{align}
+  \Delta + \delta &= \frac{5}{24} + \frac{1}{24}
+                   = \frac{1}{4}\,,\label{eq:check1}\\[4pt]
+  \frac{\Delta}{\delta} &= 5\,.\label{eq:check2}
+\end{align}
+Both are exact rational numbers, involving no approximation.  The first
+identity connects to the cone-partition geometry ($\sin^2 30° = 1/4$), while
+the second connects to the golden ratio ($\sqrt{5}$ enters $\varphi$).  The
+fact that a single pair of rationals encodes both the discrete icosahedral
+symmetry and the continuous rotational geometry of $S^3$ is a non-trivial
+consistency requirement.
+
+Additionally, the numerator of $D^*$ satisfies
+\begin{equation}
+  67 = 24\!\times\! D^* = 24 \times \frac{67}{24}\,,
+\end{equation}
+which is a prime number.  The primality of $67$ ensures that $D^*$ does not
+simplify to a ratio with a smaller denominator, thereby fixing the lattice
+scale uniquely.
+
+%======================================================================
+\section{Dedekind Eta and the Bosonic String}\label{sec:dedekind}
+%======================================================================
+
+The Dedekind eta function is defined by
+\begin{equation}\label{eq:eta}
+  \eta(\tau) = q^{1/24}\prod_{n=1}^{\infty}(1-q^n)\,,
+  \qquad q = e^{2\pi i\tau}\,,
+\end{equation}
+where $\tau$ is the modular parameter of the torus.  The exponent $1/24$
+appearing in the leading $q$-expansion is precisely the elementary lattice
+tension $\delta = 1/24$ of Axiom~II.  This is not a coincidence: the Dedekind
+eta encodes the partition function of a single free boson on a torus, and the
+$1/24$ arises from the Casimir energy
+\begin{equation}\label{eq:casimir}
+  E_0 = -\frac{1}{24}
+\end{equation}
+of each transverse oscillator mode.
+
+The bosonic string requires $D_{\text{bos}} = 26$ spacetime dimensions for
+Weyl anomaly cancellation.  In the SDGFT framework, this number emerges from
+the relation
+\begin{equation}\label{eq:dbos}
+  D_{\text{bos}} = 2 + \frac{1}{\delta} = 2 + 24 = 26\,,
+\end{equation}
+where the additive~$2$ accounts for the longitudinal (light-cone) directions.
+The 24~transverse dimensions of the bosonic string are thus in one-to-one
+correspondence with the 24~cells (or, equivalently, the 24~vertices) of the
+24-cell polytope.
+
+The $\eta$-function furthermore enters the one-loop vacuum amplitude of the
+bosonic string as $|\eta(\tau)|^{-48}$, where the exponent $48 = 2 \times 24$
+equals the number of transverse oscillators (left + right movers).  In SDGFT,
+$48 = 1/\delta + 1/\delta$.
+
+The modular transformation $\tau \to -1/\tau$ acts on $\eta$ as
+\begin{equation}\label{eq:modular}
+  \eta(-1/\tau) = \sqrt{-i\tau}\;\eta(\tau)\,,
+\end{equation}
+which encodes T-duality in string theory and, within SDGFT, the self-duality of
+the 24-cell: the polytope is invariant under the exchange of vertices and cells,
+$f_0 \leftrightarrow f_3$, mirroring the modular $S$-transformation.
+
+%======================================================================
+\section{The Zero-Parameter Philosophy}\label{sec:zero}
+%======================================================================
+
+SDGFT occupies a unique position among candidate theories of quantum gravity by
+containing \emph{zero} adjustable parameters.  Table~\ref{tab:compare}
+contrasts this with the two main competitors.
+
+\begin{table}[H]
+\centering
+\caption{Free parameters in candidate quantum-gravity
+         frameworks.}\label{tab:compare}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Framework & Free parameters & Landscape size \\
+\midrule
+String theory & moduli, fluxes & $\sim10^{500}$ \\
+Loop quantum gravity & $\gamma_{\text{BI}}$ & 1 \\
+SDGFT & 0 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In string theory, the vacuum degeneracy arises because the six (or seven)
+compact dimensions can be stabilised in exponentially many ways.  Each choice
+yields a different low-energy physics, and no dynamical selection principle has
+been identified~\cite{Bousso2000,Susskind2003}.
+
+In LQG, the Barbero--Immirzi parameter $\gamma_{\text{BI}}$ is a one-parameter
+ambiguity in the quantisation of the Ashtekar connection.  Its value is
+traditionally fixed by demanding agreement with the Bekenstein--Hawking entropy
+$S = A/(4G)$~\cite{Immirzi1997,Rovelli1996}, but this amounts to fitting one
+number rather than predicting it.
+
+SDGFT resolves both issues simultaneously.  The two axioms $\Delta$ and
+$\delta$ are not fitted---they are \emph{derived} from the combinatorics of the
+24-cell.  There is exactly one 24-cell, one value of $F_5$, and one minimal
+lattice tension.  The absence of free parameters implies that every prediction
+of the theory is a sharp numerical value, falsifiable by a single discrepant
+measurement.
+
+%======================================================================
+\section{Conclusions}\label{sec:conclusions}
+%======================================================================
+
+We have laid the axiomatic foundations of Scale-Dependent Geometric Field
+Theory.  The entire framework rests on two axioms:
+\begin{enumerate}
+  \item $\Delta = 5/24$: the Fibonacci-lattice conflict parameter, encoding the
+    incompatibility of icosahedral and crystallographic symmetry on the 24-cell;
+  \item $\delta = 1/24$: the elementary lattice tension, the minimal curvature
+    quantum of the 24-cell.
+\end{enumerate}
+From these, the golden ratio $\varphi$, the cone half-angle $\theta_{\max} =
+30°$, the six-cone partition, and the critical dimension $D^* = 67/24$ all
+follow without free parameters.
+
+The connection to the Dedekind eta function identifies $\delta$ with the
+Casimir energy per bosonic oscillator and reproduces the bosonic-string
+dimension $D_{\text{bos}} = 26$.  The self-duality of the 24-cell mirrors the
+modular $S$-transformation.
+
+Companion papers develop the $F_4$ symmetry and topology of the 24-cell
+(Ref.~\cite{Besemer2026_02}) and the six-cone partition and flavour topology
+(Ref.~\cite{Besemer2026_03}).
+
+\begin{thebibliography}{99}
+
+\bibitem{Bousso2000}
+R.~Bousso and J.~Polchinski,
+``Quantization of four-form fluxes and dynamical neutralization of the
+cosmological constant,''
+J.\ High Energy Phys.\ \textbf{06}, 006 (2000).
+
+\bibitem{Susskind2003}
+L.~Susskind,
+``The anthropic landscape of string theory,''
+arXiv:hep-th/0302219 (2003).
+
+\bibitem{Immirzi1997}
+G.~Immirzi,
+``Quantum gravity and Regge calculus,''
+Nucl.\ Phys.\ B (Proc.\ Suppl.) \textbf{57}, 65 (1997).
+
+\bibitem{Rovelli1996}
+C.~Rovelli,
+``Black hole entropy from loop quantum gravity,''
+Phys.\ Rev.\ Lett.\ \textbf{77}, 3288 (1996).
+
+\bibitem{Coxeter1973}
+H.~S.~M.~Coxeter,
+\emph{Regular Polytopes}, 3rd ed.\ (Dover, New York, 1973).
+
+\bibitem{Conway1988}
+J.~H.~Conway and N.~J.~A.~Sloane,
+``The cell structures of certain lattices,''
+in \emph{Miscellanea Mathematica} (Springer, Berlin, 1988).
+
+\bibitem{Besemer2026_02}
+D.~A.~Besemer,
+``Topology of the 24-Cell and $F_4$ Symmetry in Scale-Dependent Geometric
+Field Theory,'' SDGFT-2026-02.
+
+\bibitem{Besemer2026_03}
+D.~A.~Besemer,
+``Six-Cone Partition of the Three-Sphere and Flavour Topology,''
+SDGFT-2026-03.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,62 @@
+% ============================================================
+%  Paper 02: Topology of the 24-Cell and F4 Symmetries in Quantum Field Theory
+%  Target: RevTeX 4-2 Compilation (SDGFT Series)
+% ============================================================
+\documentclass[amsmath,amssymb,aps,prd,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+
+% ── SDGFT shared macros ──────────────────────────────────────
+\usepackage{sdgft-macros}
+
+% ── Document ─────────────────────────────────────────────────
+\begin{document}
+
+\preprint{SDGFT-2026-02}
+
+\title{Topology of the 24-Cell and F4 Symmetries in Quantum Field Theory}
+
+\author{David A. Besemer}
+\email{david.besemer@sdgft.org}
+\affiliation{Independent Researcher}
+
+\date{\today}
+
+\begin{abstract}
+We investigate the algebraic structure of the 24-cell polytope {3,4,3} and its automorphism group F4. By decomposing the 24-cell into three orthogonal 16-cell sub-lattices, we demonstrate the emergence of D4 triality. We establish how the gauge symmetries of the Standard Model arise naturally from Dynkin diagram deletions of the F4 root system, presenting a top-down geometric derivation of gauge groups in quantum field theory.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+The unification of gauge symmetries with gravity is a long-standing goal of mathematical physics. We approach this by studying the Dynkin diagram of F4, the exceptional Lie algebra associated with the symmetries of the 24-cell.
+
+\section{Theoretical Formulation}
+Here we formulate the core mathematical relations governing the system:
+\begin{equation}
+  24 = 8 + 8 + 8 \quad (\text{decomposition into three orthogonal 16-cells})
+\end{equation}
+\begin{equation}
+  F_4 \xrightarrow{\text{deletion}} SU(3)_C \times SU(2)_L \times U(1)_Y
+\end{equation}
+\section{Dynkin Deletions}
+By removing peripheral Dynkin nodes of the F4 algebra, we isolate the subalgebra corresponding to the Standard Model gauge group, demonstrating that flavour triality is topological.
+
+\section{Conclusion}
+The root system of the 24-cell uniquely determines the gauge structure of the early universe, precluding any additional dark gauge forces at the Planck scale.
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Goldstein_Paper01} D. A. Besemer, ``Axiomatic Foundations of SDGFT,'' SDGFT-2026-01 (in preparation).
+\bibitem{Goldstein_Paper04} D. A. Besemer, ``Effective Spectral Dimension and the Banach Fixed-Point Theorem in SDGFT,'' SDGFT-2026-04.
+\bibitem{Goldstein_Code} D. A. Besemer, \texttt{sdgft} Python package, \url{https://github.com/david-besemer/sdgft} (2026).
+\end{thebibliography}
+
+\end{document}

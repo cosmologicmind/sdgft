@@ -1,0 +1,76 @@
+% ============================================================
+%  sdgft-macros.sty — Shared LaTeX macros for the SDGFT series
+%  Version 1.0 (June 2026)
+% ============================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sdgft-macros}[2026/06/29 SDGFT shared macros v1.0]
+
+% ── Required packages ─────────────────────────────────────────
+\RequirePackage{amsmath,amssymb,amsfonts}
+\RequirePackage{mathtools}
+\RequirePackage{bm}
+
+% ── Level 0: Topological Axioms ───────────────────────────────
+\newcommand{\DD}{\Delta}                      % Big Delta = 5/24
+\newcommand{\dd}{\delta}                      % Small delta = 1/24
+\newcommand{\Df}{\tfrac{5}{24}}               % Delta as fraction
+\newcommand{\df}{\tfrac{1}{24}}               % delta as fraction
+
+% ── Level 1: Emergent Constants ───────────────────────────────
+\newcommand{\gp}{\varphi}                     % Golden ratio phi
+\newcommand{\thetamax}{\theta_{\mathrm{max}}} % 30-degree cone half-angle
+
+% ── Level 2: Effective Dimension ──────────────────────────────
+\newcommand{\Dstar}{D^{*}}                    % Effective dimension
+\newcommand{\Dstartree}{D^{*}_{\mathrm{tree}}}
+\newcommand{\Dstarfp}{D^{*}_{\mathrm{fp}}}
+\newcommand{\nfR}{n}                          % f(R) exponent = D*/2
+\newcommand{\fRn}{f(R) = R^{\nfR}}            % f(R) action shorthand
+\newcommand{\Tmap}{\mathcal{T}}               % Flow operator
+
+% ── Level 3: Modified Gravity (Horndeski) ─────────────────────
+\newcommand{\aM}{\alpha_{\mathrm{M}}}         % Planck mass run-rate
+\newcommand{\aB}{\alpha_{\mathrm{B}}}         % Braiding
+\newcommand{\aT}{\alpha_{\mathrm{T}}}         % Tensor speed
+\newcommand{\aK}{\alpha_{\mathrm{K}}}         % Kineticity
+
+% ── Level 4: Inflation ────────────────────────────────────────
+\newcommand{\Ne}{N_e}                         % E-folds
+\newcommand{\ns}{n_s}                         % Spectral index
+\newcommand{\rts}{r}                          % Tensor-to-scalar ratio
+\newcommand{\epsSR}{\epsilon}                 % Slow-roll epsilon
+\newcommand{\etaSR}{\eta}                     % Slow-roll eta
+\newcommand{\betaiso}{\beta_{\mathrm{iso}}}   % Isocurvature fraction
+
+% ── Level 5–6: Cosmology ─────────────────────────────────────
+\newcommand{\wDE}{w_{\mathrm{DE}}}            % Dark energy EoS
+\newcommand{\etaB}{\eta_{\mathrm{B}}}         % Baryon asymmetry
+\newcommand{\OmB}{\Omega_b}                   % Baryon density
+\newcommand{\OmC}{\Omega_c}                   % CDM density
+\newcommand{\OmDE}{\Omega_{\mathrm{DE}}}      % Dark energy density
+\newcommand{\OmM}{\Omega_m}                   % Total matter density
+\newcommand{\rd}{r_d}                         % BAO sound horizon
+
+% ── Particle Physics ──────────────────────────────────────────
+\newcommand{\als}{\alpha_s}                   % Strong coupling
+\newcommand{\aem}{\alpha_{\mathrm{em}}}       % Fine-structure constant
+\newcommand{\sinW}{\sin^2\!\theta_W}          % Weak mixing angle
+\newcommand{\MZ}{M_Z}                         % Z boson mass
+\newcommand{\MH}{M_H}                         % Higgs mass
+\newcommand{\Mt}{M_t}                         % Top quark mass
+\newcommand{\JCP}{J_{\mathrm{CP}}}            % Jarlskog invariant
+\newcommand{\VCKM}{V_{\mathrm{CKM}}}         % CKM matrix
+\newcommand{\UPMNS}{U_{\mathrm{PMNS}}}       % PMNS matrix
+\newcommand{\bTF}{b_{\mathrm{TF}}}           % Tully-Fisher slope
+
+% ── Lorentz Violation ─────────────────────────────────────────
+\newcommand{\xiLIV}{\xi_{\mathrm{LIV}}}      % LIV parameter
+\newcommand{\EPl}{E_{\mathrm{Pl}}}            % Planck energy
+
+% ── Utility ───────────────────────────────────────────────────
+\newcommand{\order}[1]{\mathcal{O}\!\left(#1\right)}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\sign}{sgn}
+
+\endinput

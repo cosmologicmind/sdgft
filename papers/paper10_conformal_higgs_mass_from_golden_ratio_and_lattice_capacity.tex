@@ -1,0 +1,62 @@
+% ============================================================
+%  Paper 10: Conformal Higgs Mass from Golden Ratio and Lattice Capacity
+%  Target: RevTeX 4-2 Compilation (SDGFT Series)
+% ============================================================
+\documentclass[amsmath,amssymb,aps,prd,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+
+% ── SDGFT shared macros ──────────────────────────────────────
+\usepackage{sdgft-macros}
+
+% ── Document ─────────────────────────────────────────────────
+\begin{document}
+
+\preprint{SDGFT-2026-10}
+
+\title{Conformal Higgs Mass from Golden Ratio and Lattice Capacity}
+
+\author{David A. Besemer}
+\email{david.besemer@sdgft.org}
+\affiliation{Independent Researcher}
+
+\date{\today}
+
+\begin{abstract}
+We calculate the mass of the Higgs boson from the conformal geometry of the F4 lattice. The physical mass is derived from the tree-level Z-boson mass, corrected by the topological conformal scale factor (1 + Delta/phi). This yields a Higgs mass of MH ~ 125.11 GeV, in agreement with the current experimental average.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+The discovery of the Higgs boson at ~125 GeV completed the Standard Model. We derive its mass from the conformal ratio of the 24-cell lattice.
+
+\section{Theoretical Formulation}
+Here we formulate the core mathematical relations governing the system:
+\begin{equation}
+  M_H = M_Z \sqrt{\frac{23}{12} \frac{37}{48}} \left(1 + \frac{\DD}{\gp}\right)
+\end{equation}
+\begin{equation}
+  M_H \approx 91.1876 \times 1.21544 \times 1.12876 \approx 125.11 \text{ GeV}
+\end{equation}
+\section{Conformal Correction Factor}
+The correction factor (1 + Delta/phi) represents the scale factor between the F4 lattice tension and the golden ratio, which governs electroweak symmetry breaking.
+
+\section{Conclusion}
+The Higgs mass is not a free parameter but is fixed by the conformal structure of the electroweak sector.
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Goldstein_Paper01} D. A. Besemer, ``Axiomatic Foundations of SDGFT,'' SDGFT-2026-01 (in preparation).
+\bibitem{Goldstein_Paper04} D. A. Besemer, ``Effective Spectral Dimension and the Banach Fixed-Point Theorem in SDGFT,'' SDGFT-2026-04.
+\bibitem{Goldstein_Code} D. A. Besemer, \texttt{sdgft} Python package, \url{https://github.com/david-besemer/sdgft} (2026).
+\end{thebibliography}
+
+\end{document}

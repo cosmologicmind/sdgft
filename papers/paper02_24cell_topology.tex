@@ -1,0 +1,329 @@
+%%% SDGFT-2026-02
+%%% Topology of the 24-Cell and F4 Symmetry in Scale-Dependent Geometric
+%%% Field Theory
+%%%
+\documentclass[amsmath,amssymb,aps,prd,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{sdgft-macros}
+
+\begin{document}
+
+\preprint{SDGFT-2026-02}
+
+\title{Topology of the 24-Cell and $F_4$ Symmetry in Scale-Dependent
+       Geometric Field Theory}
+
+\author{David~A.~Besemer}
+\email{david.besemer@sdgft.org}
+\affiliation{Independent Researcher}
+\date{\today}
+
+\begin{abstract}
+We investigate the topology and symmetry of the 24-cell polytope
+$\{3,4,3\}$, the fundamental geometric object of Scale-Dependent Geometric
+Field Theory (SDGFT).  After reviewing the vertex coordinates on the unit
+three-sphere $S^3$ and establishing the self-duality of the polytope, we
+decompose the 24-cell into three mutually orthogonal 16-cells, each
+contributing eight vertices ($8+8+8=24$).  The full automorphism group is the
+Weyl group $W(F_4)$ of order~1152.  We discuss $D_4$~triality---the
+order-three outer automorphism of $\mathfrak{so}(8)$---and show how it
+permutes the three 16-cell sub-polytopes.  Finally, we trace the Dynkin-diagram
+chain $F_4 \to D_4 \to A_2 \oplus A_1 \oplus U(1)$, recovering the Standard
+Model gauge group $SU(3)_C \times SU(2)_L \times U(1)_Y$ via successive
+peripheral-node removal.
+\end{abstract}
+
+\maketitle
+
+%======================================================================
+\section{Introduction}\label{sec:intro}
+%======================================================================
+
+The 24-cell occupies a privileged position in four-dimensional geometry: it is
+the unique self-dual regular polytope with no lower-dimensional counterpart.
+In Scale-Dependent Geometric Field Theory~\cite{Besemer2026_01}, every physical
+constant is derived from the combinatorial and topological data of this single
+object.  The present paper provides the mathematical underpinning for that
+programme by analysing the 24-cell's geometry, symmetry group, and
+representation-theoretic structure in detail.
+
+Section~\ref{sec:geometry} reviews the geometric properties of the 24-cell,
+including its vertex coordinates and self-duality proof.
+Section~\ref{sec:decomp} presents the decomposition into three orthogonal
+16-cells.  Sections~\ref{sec:F4}--\ref{sec:dynkin} develop the $F_4$ symmetry,
+$D_4$ triality, and the Dynkin-diagram descent to the Standard Model gauge
+group.  Section~\ref{sec:conclusions} concludes.
+
+%======================================================================
+\section{Geometric Properties}\label{sec:geometry}
+%======================================================================
+
+\subsection{Vertex coordinates on $S^3$}
+
+The 24 vertices of the 24-cell may be placed on the unit three-sphere
+$S^3 \subset \mathbb{R}^4$.  They fall into two orbits under the hyperoctahedral
+group $B_4$:
+\begin{align}
+  V_1 &= \bigl\{(\pm1,0,0,0)\text{ and permutations}\bigr\}
+         \quad(8\text{ vertices})\,,\label{eq:V1}\\[4pt]
+  V_2 &= \bigl\{\tfrac{1}{\sqrt{2}}(\pm1,\pm1,0,0)
+         \text{ and permutations}\bigr\}
+         \quad(16\text{ vertices})\,.\label{eq:V2}
+\end{align}
+Every vertex has unit norm, $|v|=1$, and the minimal edge length is
+$\ell = \sqrt{2 - \sqrt{2}} \approx 1$ after rescaling.
+
+\subsection{Face and cell counts}
+
+The $f$-vector of the 24-cell is
+\begin{equation}\label{eq:fvec}
+  (f_0,\,f_1,\,f_2,\,f_3) = (24,\,96,\,96,\,24)\,.
+\end{equation}
+The equality $f_0 = f_3$ and $f_1 = f_2$ is the hallmark of a self-dual
+polytope.
+
+\subsection{Self-duality proof}
+
+A polytope $P$ is \emph{self-dual} if there exists an isomorphism
+$\phi\colon P \to P^*$ between $P$ and its dual $P^*$ that reverses the
+face lattice.  For the 24-cell, the dual is constructed by placing a vertex at
+the centroid of each octahedral cell.  Because every octahedral cell of
+$\{3,4,3\}$ is regular, its centroid lies at a well-defined point on $S^3$.
+The 24~centroids form a polytope combinatorially isomorphic to the original,
+with $f$-vector $(24,96,96,24)$.  This establishes
+\begin{equation}\label{eq:selfdual}
+  \{3,4,3\}^* \cong \{3,4,3\}\,.
+\end{equation}
+
+More precisely, the dual vertices are obtained by the inversion map
+$v \mapsto v/|v|^2$ (which acts as the identity on $S^3$), followed by a
+rotation in $\mathrm{SO}(4)$.  The existence of this rotation is guaranteed by
+the transitive action of $W(F_4)$ on cells and vertices alike~\cite{Coxeter1973}.
+
+The self-duality of the 24-cell is unique among regular 4-polytopes: the
+5-cell is self-dual but exists in all dimensions (as the simplex), while the
+hypercube $\{4,3,3\}$ and its dual 16-cell $\{3,3,4\}$ are \emph{not}
+self-dual.  The 120-cell and 600-cell form a dual pair but are not individually
+self-dual.
+
+%======================================================================
+\section{Decomposition into Three 16-Cells}\label{sec:decomp}
+%======================================================================
+
+The 24 vertices of the 24-cell admit a partition into three mutually orthogonal
+16-cells (cross-polytopes $\beta_4$).  Concretely, label the three subsets as
+\begin{align}
+  C_1 &: \{(\pm1,0,0,0),\;(0,\pm1,0,0),\;(0,0,\pm1,0),\;(0,0,0,\pm1)\}\,,
+         \label{eq:C1}\\[3pt]
+  C_2 &: \tfrac{1}{\sqrt{2}}\{(\pm1,\pm1,0,0),\;(0,0,\pm1,\pm1)\}\,,
+         \label{eq:C2}\\[3pt]
+  C_3 &: \tfrac{1}{\sqrt{2}}\{(\pm1,0,\pm1,0),\;(0,\pm1,0,\pm1)\}\,.
+         \label{eq:C3}
+\end{align}
+Each $C_i$ contains exactly 8~vertices, and no two subsets share a vertex:
+$C_1 \cap C_2 = C_1 \cap C_3 = C_2 \cap C_3 = \varnothing$, with
+$C_1 \cup C_2 \cup C_3$ recovering all 24~vertices.
+
+Within each $C_i$, the vertices form a regular 16-cell.  The three 16-cells are
+``orthogonal'' in the sense that the inner products between vertices drawn from
+different subsets satisfy
+\begin{equation}\label{eq:ortho}
+  \langle v_i,\, v_j \rangle = \pm\tfrac{1}{\sqrt{2}}
+  \quad\text{for}\; v_i \in C_a,\; v_j \in C_b,\; a \neq b\,,
+\end{equation}
+i.e., vertices from different 16-cells are never parallel or antiparallel.
+
+This triple decomposition is the geometric avatar of \emph{triality}: the three
+16-cells are cyclically permuted by an outer automorphism of $D_4$
+(Sec.~\ref{sec:triality}).
+
+%======================================================================
+\section{The $F_4$ Symmetry Group}\label{sec:F4}
+%======================================================================
+
+The automorphism group of the 24-cell is the Weyl group of the exceptional Lie
+algebra $\mathfrak{f}_4$:
+\begin{equation}\label{eq:WF4}
+  \mathrm{Aut}\bigl(\{3,4,3\}\bigr) = W(F_4)\,,
+  \qquad |W(F_4)| = 1152\,.
+\end{equation}
+The order decomposes as $1152 = 2^7 \times 3^2$.  The group acts transitively
+on vertices, edges, 2-faces, and 3-cells, reflecting the high degree of
+regularity of the 24-cell.
+
+The root system of $F_4$ consists of 48~roots, which are precisely the
+24~vertices of the 24-cell together with 24~mid-edge points (forming the dual
+24-cell upon rescaling).  In the standard normalisation, the short roots have
+length~$1$ and the long roots length~$\sqrt{2}$, with the ratio
+$|\alpha_{\text{long}}|/|\alpha_{\text{short}}| = \sqrt{2}$.
+
+The Weyl group $W(F_4)$ contains $W(D_4)$ as a normal subgroup of index~3:
+\begin{equation}\label{eq:quotient}
+  W(F_4) / W(D_4) \cong S_3\,,
+\end{equation}
+where $S_3$ is the symmetric group on three elements, acting as the triality
+group that permutes the three 16-cell sub-polytopes.  The order of $W(D_4)$ is
+$|W(D_4)| = 192 = 2^6 \times 3$, consistent with $1152/192 = 6 = |S_3|$.
+
+%======================================================================
+\section{$D_4$ Triality}\label{sec:triality}
+%======================================================================
+
+The Lie algebra $\mathfrak{so}(8) \cong D_4$ possesses a unique feature among
+all simple Lie algebras: its Dynkin diagram has an $S_3$ symmetry arising from
+the threefold branching at the central node.  This symmetry is the \emph{triality
+automorphism}, which permutes the three 8-dimensional representations:
+\begin{equation}\label{eq:triality}
+  \mathbf{8}_v \;\longleftrightarrow\; \mathbf{8}_s
+  \;\longleftrightarrow\; \mathbf{8}_c\,,
+\end{equation}
+where $\mathbf{8}_v$ is the vector representation, $\mathbf{8}_s$ the
+positive-chirality spinor, and $\mathbf{8}_c$ the negative-chirality spinor.
+
+In the 24-cell decomposition of Sec.~\ref{sec:decomp}, the three 16-cells
+$C_1$, $C_2$, $C_3$ are the geometric realisations of these three
+representations.  The triality automorphism acts as
+\begin{equation}\label{eq:triality_action}
+  \sigma\colon C_1 \to C_2 \to C_3 \to C_1\,,
+  \qquad \sigma^3 = \mathrm{id}\,.
+\end{equation}
+
+This has a direct physical interpretation in SDGFT: the three 16-cells
+correspond to the three fermion generations.  Triality guarantees that the three
+generations are treated on an exactly equal footing at the level of the
+fundamental polytope, with generation-dependent mass splittings arising only
+from the scale-dependent running of the geometric couplings.
+
+The triality automorphism also interchanges the Dynkin labels of $D_4$.
+Denoting the four simple roots as $\alpha_1,\alpha_2,\alpha_3,\alpha_4$ with
+$\alpha_2$ the central node:
+\begin{equation}
+  \sigma\colon \alpha_1 \to \alpha_3 \to \alpha_4 \to \alpha_1\,,
+  \qquad \alpha_2 \to \alpha_2\,.
+\end{equation}
+
+%======================================================================
+\section{Dynkin Diagram Structure and the Standard Model}\label{sec:dynkin}
+%======================================================================
+
+The $F_4$ Dynkin diagram is
+\begin{equation}\label{eq:F4dynkin}
+  \underset{\alpha_1}{\circ}\text{---}
+  \underset{\alpha_2}{\circ}\text{=\!=}
+  \underset{\alpha_3}{\circ}\text{---}
+  \underset{\alpha_4}{\circ}
+\end{equation}
+where the double bond connects $\alpha_2$ and $\alpha_3$ (short--long root
+junction).  Removing the peripheral node $\alpha_1$ yields the $B_3$ sub-diagram;
+removing $\alpha_4$ yields $C_3$.
+
+The key observation for SDGFT is the chain of maximal-rank sub-algebras
+obtained by successive peripheral-node removals and branchings:
+\begin{equation}\label{eq:chain}
+  F_4 \;\supset\; D_4 \;\supset\;
+  A_2 \oplus A_1 \oplus U(1)\,.
+\end{equation}
+The first step, $F_4 \supset D_4$, corresponds to breaking the long/short root
+equivalence.  The second step decomposes $D_4 \cong \mathfrak{so}(8)$ via the
+branching rule
+\begin{equation}\label{eq:branching}
+  \mathfrak{so}(8) \;\supset\;
+  \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)\,,
+\end{equation}
+which is precisely the Lie-algebraic content of the Standard Model gauge group
+\begin{equation}\label{eq:SM}
+  G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y\,.
+\end{equation}
+
+The $\mathfrak{su}(3)$ factor (the $A_2$ node) governs the colour interaction,
+$\mathfrak{su}(2)$ (the $A_1$ node) the weak isospin, and $\mathfrak{u}(1)$
+hypercharge.  No additional $U(1)$ factors or exotic gauge bosons appear: the
+rank of $D_4$ is~4, equal to the rank of $G_{\mathrm{SM}}$ when the
+hypercharge generator is included.
+
+The representation content follows from the $D_4$ branching rules.  Under the
+decomposition~\eqref{eq:branching}, the vector representation splits as
+\begin{equation}\label{eq:8v_decomp}
+  \mathbf{8}_v \to (\mathbf{3},\mathbf{1})_{+2/3}
+               \oplus (\bar{\mathbf{3}},\mathbf{1})_{-2/3}
+               \oplus (\mathbf{1},\mathbf{2})_0\,,
+\end{equation}
+reproducing the quantum numbers of a quark doublet and a lepton doublet.  The
+spinor representations $\mathbf{8}_s$ and $\mathbf{8}_c$ decompose analogously,
+providing the remaining SM fermion multiplets.
+
+%======================================================================
+\section{Conclusions}\label{sec:conclusions}
+%======================================================================
+
+We have established the topological and group-theoretic properties of the
+24-cell that underpin Scale-Dependent Geometric Field Theory:
+
+\begin{enumerate}
+  \item The 24-cell is the unique self-dual regular 4-polytope, with
+    $f$-vector $(24,96,96,24)$.
+
+  \item It decomposes into three mutually orthogonal 16-cells
+    ($8+8+8=24$), the geometric avatar of $D_4$ triality and the three
+    fermion generations.
+
+  \item Its automorphism group $W(F_4)$, of order~1152, contains $W(D_4)$
+    as a normal subgroup of index~$6 = |S_3|$.
+
+  \item The Dynkin-diagram chain $F_4 \supset D_4 \supset
+    A_2 \oplus A_1 \oplus U(1)$ recovers the Standard Model gauge group
+    $SU(3)_C \times SU(2)_L \times U(1)_Y$ without additional assumptions.
+\end{enumerate}
+
+Together with the axiomatic foundations of Ref.~\cite{Besemer2026_01} and the
+six-cone partition of Ref.~\cite{Besemer2026_03}, these results provide the
+geometric basis for the full SDGFT programme.
+
+\begin{thebibliography}{99}
+
+\bibitem{Besemer2026_01}
+D.~A.~Besemer,
+``Axiomatic Foundations of Scale-Dependent Geometric Field Theory,''
+SDGFT-2026-01.
+
+\bibitem{Besemer2026_03}
+D.~A.~Besemer,
+``Six-Cone Partition of the Three-Sphere and Flavour Topology,''
+SDGFT-2026-03.
+
+\bibitem{Coxeter1973}
+H.~S.~M.~Coxeter,
+\emph{Regular Polytopes}, 3rd ed.\ (Dover, New York, 1973).
+
+\bibitem{Conway1988}
+J.~H.~Conway and N.~J.~A.~Sloane,
+\emph{Sphere Packings, Lattices and Groups}, 3rd ed.\
+(Springer, New York, 1999).
+
+\bibitem{Adams1996}
+J.~F.~Adams,
+\emph{Lectures on Exceptional Lie Groups}
+(University of Chicago Press, Chicago, 1996).
+
+\bibitem{Baez2002}
+J.~C.~Baez,
+``The octonions,''
+Bull.\ Am.\ Math.\ Soc.\ \textbf{39}, 145 (2002).
+
+\bibitem{Humphreys1990}
+J.~E.~Humphreys,
+\emph{Reflection Groups and Coxeter Groups}
+(Cambridge University Press, Cambridge, 1990).
+
+\bibitem{Georgi1974}
+H.~Georgi and S.~L.~Glashow,
+``Unity of all elementary-particle forces,''
+Phys.\ Rev.\ Lett.\ \textbf{32}, 438 (1974).
+
+\end{thebibliography}
+
+\end{document}

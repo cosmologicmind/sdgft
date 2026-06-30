@@ -1,0 +1,59 @@
+% ============================================================
+%  Paper 17: Inflationary Observables from Dimensional Flow in Scale-Dependent Geometric Field Theory
+%  Target: JCAP Compilation (SDGFT Series)
+% ============================================================
+\documentclass[a4paper,11pt]{article}
+\usepackage{jcappub}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+
+% ── SDGFT shared macros ──────────────────────────────────────
+\usepackage{sdgft-macros}
+
+% ── Document ─────────────────────────────────────────────────
+\begin{document}
+
+\title{Inflationary Observables from Dimensional Flow in Scale-Dependent Geometric Field Theory}
+
+\author{David A. Besemer}
+\affiliation{Independent Researcher}
+\emailAdd{david.besemer@sdgft.org}
+
+\abstract{
+We derive the inflationary observables of SDGFT, where inflation is driven by the dimensional flow from the UV fixed point to the IR attractor. We calculate the primordial spectral index ns ~ 0.967 and the tensor-to-scalar ratio r ~ 0.013. We present the formal erratum correcting the legacy blue spectrum formula.
+}
+
+\arxivnumber{SDGFT-2026-17}
+
+\maketitle
+
+\section{Introduction}
+Inflation is typically driven by an inflaton field. In SDGFT, it arises from the transition of the spectral dimension of spacetime.
+
+\section{Theoretical Formulation}
+Here we formulate the core mathematical relations governing the system:
+\begin{equation}
+  \ns = 1 - \frac{2(2n-1)}{\Ne(2n-1) + n} \approx 0.9671
+\end{equation}
+\begin{equation}
+  \rts = \frac{48(2n-1)^2}{[\Ne(2n-1) + n]^2} \approx 0.0130
+\end{equation}
+\section{CMB Observables}
+The scalar spectral index and tensor-to-scalar ratio are calculated using the Jordan-frame slow-roll equations for f(R) gravity.
+
+\section{Conclusion}
+The predicted tensor-to-scalar ratio r ~ 0.013 will be tested by next-generation polarization experiments, providing a test of the theory.
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Goldstein_Paper01} D. A. Besemer, ``Axiomatic Foundations of SDGFT,'' SDGFT-2026-01 (in preparation).
+\bibitem{Goldstein_Paper04} D. A. Besemer, ``Effective Spectral Dimension and the Banach Fixed-Point Theorem in SDGFT,'' SDGFT-2026-04.
+\bibitem{Goldstein_Code} D. A. Besemer, \texttt{sdgft} Python package, \url{https://github.com/david-besemer/sdgft} (2026).
+\end{thebibliography}
+
+\end{document}

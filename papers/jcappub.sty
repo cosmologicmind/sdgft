@@ -1,0 +1,65 @@
+% ============================================================
+%  jcappub.sty — Mock/bridge style for compiling JCAP papers
+%  using standard LaTeX article class.
+% ============================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jcappub}[2026/06/29 JCAP Mock Package]
+
+\RequirePackage[a4paper,margin=2.5cm]{geometry}
+\RequirePackage{hyperref}
+\RequirePackage{xcolor}
+\RequirePackage{etoolbox}
+
+% Color definitions similar to JCAP
+\definecolor{blueviolet}{rgb}{0.54, 0.17, 0.89}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blueviolet,
+    citecolor=blueviolet,
+    filecolor=blueviolet,
+    urlcolor=blueviolet,
+}
+
+% Author, Affiliation, Email, Keywords, Arxiv number
+\newcommand{\emailAdd}[1]{\gdef\@emailadd{#1}}
+\newcommand{\keywords}[1]{\gdef\@keywords{#1}}
+\newcommand{\arxivnumber}[1]{\gdef\@arxivnumber{#1}}
+\newcommand{\affiliation}[2][]{\gdef\@affiliation{#2}}
+
+% Redefine abstract as a command for JCAP style compatibility
+\renewcommand{\abstract}[1]{\gdef\@abstract{#1}}
+
+% Adjust maketitle to output JCAP-like header page
+\renewcommand{\maketitle}{
+    \begin{center}
+        {\Huge\bfseries\@title \par}
+        \vskip 1.5em
+        {\large \@author \par}
+        \vskip 1.0em
+        \ifdef{\@affiliation}{{\large \itshape \@affiliation} \par}{}
+        \vskip 0.5em
+        \ifdef{\@emailadd}{\href{mailto:\@emailadd}{\texttt{\@emailadd}} \par}{}
+        \ifdef{\@arxivnumber}{\vskip 0.5em arXiv:\@arxivnumber \par}{}
+    \end{center}
+    \vskip 1.5em
+    \ifdef{\@abstract}{
+        \begin{quotation}
+            \noindent\textbf{Abstract.} \@abstract
+        \end{quotation}
+    }{}
+    \ifdef{\@keywords}{
+        \begin{quotation}
+            \noindent\textbf{Keywords:} \@keywords
+        \end{quotation}
+    }{}
+    \vskip 2.0em
+    \hrule
+    \vskip 2.0em
+}
+
+% Define acknowledgments environment
+\newenvironment{acknowledgments}{
+    \section*{Acknowledgments}
+}{}
+
+\endinput

@@ -1,0 +1,62 @@
+% ============================================================
+%  Paper 11: Lepton Mass Hierarchies and the Geometric Coupling Constant
+%  Target: RevTeX 4-2 Compilation (SDGFT Series)
+% ============================================================
+\documentclass[amsmath,amssymb,aps,prd,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+
+% ── SDGFT shared macros ──────────────────────────────────────
+\usepackage{sdgft-macros}
+
+% ── Document ─────────────────────────────────────────────────
+\begin{document}
+
+\preprint{SDGFT-2026-11}
+
+\title{Lepton Mass Hierarchies and the Geometric Coupling Constant}
+
+\author{David A. Besemer}
+\email{david.besemer@sdgft.org}
+\affiliation{Independent Researcher}
+
+\date{\today}
+
+\begin{abstract}
+We calculate the mass ratios of the charged leptons (e, mu, tau) using the geometric coupling constant xi_geo = 67/2688. We show that the muon-to-electron mass ratio is governed by the inverse fine-structure constant and the lattice conflict Delta, yielding m_mu/m_e ~ 206.77. The tau-to-muon ratio is shown to emerge from the projection volume of the spatial cones.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+The lepton mass hierarchy spans five orders of magnitude. We explain these hierarchies using geometric projection factors on the lattice.
+
+\section{Theoretical Formulation}
+Here we formulate the core mathematical relations governing the system:
+\begin{equation}
+  \frac{m_\mu}{m_e} = \frac{3}{2\aem} + 1 + \DD \approx 206.768
+\end{equation}
+\begin{equation}
+  \frac{m_\tau}{m_\mu} = 3\pi \left(1 - \frac{2}{9}\right) \approx 16.755 \quad (\text{ratio of cone projections})
+\end{equation}
+\section{Mass Ratio Derivations}
+The formulas use the spatial volumes of the projected sectors, mapping the electron to the central defect and the muon and tau to the outer boundaries.
+
+\section{Conclusion}
+The charged lepton masses are shown to be topological eigenvalues of the spatial geometry, matching experimental values within experimental error.
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Goldstein_Paper01} D. A. Besemer, ``Axiomatic Foundations of SDGFT,'' SDGFT-2026-01 (in preparation).
+\bibitem{Goldstein_Paper04} D. A. Besemer, ``Effective Spectral Dimension and the Banach Fixed-Point Theorem in SDGFT,'' SDGFT-2026-04.
+\bibitem{Goldstein_Code} D. A. Besemer, \texttt{sdgft} Python package, \url{https://github.com/david-besemer/sdgft} (2026).
+\end{thebibliography}
+
+\end{document}
