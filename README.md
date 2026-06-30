@@ -69,13 +69,13 @@ src/sdgft/
 
 | Observable | SDGFT | Experiment | Tension |
 |:-----------|------:|-----------:|--------:|
-| Ω_DE (dark energy) | 0.7331 | 0.6847 ± 0.0073 | 6.6σ\* |
-| H₀ (Hubble) | 70.7 km/s/Mpc | 67.4 ± 0.5 | 6.6σ\* |
-| Neutrino R = D\*/(2δ) | 33.5 | 33.41 ± 0.15 | 0.6σ |
+| Ω_DE (dark energy) | 0.6897 | 0.6847 ± 0.0073 | 0.68σ\* |
+| H₀ (Hubble) | 68.6 km/s/Mpc | 67.4 ± 0.5 | 2.43σ\* |
+| Neutrino R = D\*/(2δ) | 33.56 | 33.41 ± 0.15 | 0.20σ |
 | Δa_μ (muon g-2) | 2.395 × 10⁻⁹ | 2.49 × 10⁻⁹ | 0.20σ |
 | Lamb shift (tree) | 1060.3 MHz | 1057.845 ± 0.009 | 0.23% |
 | Lamb shift (fp) | 1056.4 MHz | 1057.845 ± 0.009 | 0.13% |
-| sin²θ_W | 0.2315 | 0.23122 ± 0.00003 | 0.9σ |
+| sin²θ_W | 0.2312 | 0.23122 ± 0.00003 | 0.00σ |
 
 \* Ω_DE and H₀ tensions are against Planck-ΛCDM; SDGFT predicts a _dynamical_ dark energy running ~r^{−γ} with γ = 1/1608.
 
